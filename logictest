@@ -1,0 +1,46 @@
+class foobar():
+         def __init__(self,mylist):
+             self.mylist = mylist
+             self._foobarlist = []
+
+         @property
+         def getfoobarlist(self):
+             return self._foobarlist
+
+
+         def getfoobar(self, div1=3, div2=5):
+             try:
+                 foobarlist = []
+                 for i in self.mylist:
+                     if i%div1==0 and i%div2!=0:
+                         print ("foo")
+                         foobarlist.append("foo")
+                     elif i%div1!=0 and i%div2==0:
+                         print ("bar")
+                         foobarlist.append("bar")
+                     elif i%div1==0 and i%div2==0:
+                         print ("foobar")
+                         foobarlist.append("foobar")
+                     else:
+                         print (i)
+                         foobarlist.append(i)
+                 self._foobarlist = foobarlist
+             except ZeroDivisionError:
+                 print ("oops, can not divide by 0 ")
+
+
+
+def  test(inlist,div1=3,div2=5):
+
+     try:
+             for i in inlist:
+                 if i%div1==0 and i%div2!=0:
+                     print ("foo")
+                 elif i%div1!=0 and i%div2==0:
+                     print ("bar")
+                 elif i%div1==0 and i%div2==0:
+                     print ("foobar")
+                 else:
+                     print (i)
+     except ZeroDivisionError:
+             print ("oops, can not divide by 0 ")
