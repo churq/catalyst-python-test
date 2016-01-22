@@ -1,0 +1,14 @@
+1.mysql all in one version is downloaded from https://github.com/churq/catalyst-python-test.git
+2. unzip the file to c:mysql directory
+3.create my.ini file in following way(don't edit my_default.ini,which is a template):
+[mysqld]
+
+# These are commonly set, remove the # and set as required.
+basedir = "C:/mysql/"
+datadir = "C"/mysql"
+
+in command prompt
+type 
+c:\mysql\bin
+run: mysqld
+
